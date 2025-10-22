@@ -1,2 +1,3 @@
-let score = 10;
-console.log(score);
+let firstName = "Nils";
+const homeTown = "Lomma";
+console.log(firstName, homeTown);
