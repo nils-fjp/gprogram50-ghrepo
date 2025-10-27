@@ -40,3 +40,4 @@ const nullVar = null;
 const nullCheck = nullVar == 0;
 console.log(typeof nullVar);
 console.log(typeof 0);
+console.log(nullCheck);
