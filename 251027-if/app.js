@@ -51,3 +51,10 @@ console.log(undefinedVar)
 console.log(typeof undefinedVar)
 console.log(nullVar)
 console.log(typeof nullVar)
+
+// 8. resultat nanCheck
+
+const baseScore = 100
+const notNum = baseScore * 'abc' 
+const nanCheck = notNum == notNum
+console.log(notNum)
