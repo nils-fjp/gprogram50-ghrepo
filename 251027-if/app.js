@@ -11,7 +11,7 @@ let userProfileData = null;
 isAdmin = data.isAdmin;
 isSignedIn = data.isSignedIn;
 
-let showAdminSite = isSignedin && isAdmin;
+let showAdminSite = isSignedIn && isAdmin;
 
 userLevel = userLevel || 1;
 const canAccess = isAdmin && userLevel > 0;
