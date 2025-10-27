@@ -41,3 +41,13 @@ const nullCheck = nullVar == 0;
 console.log(typeof nullVar);
 console.log(typeof 0);
 console.log(nullCheck);
+
+// 7. 
+
+let undefinedVar;
+const undefCheck = nullVar = undefinedVar
+
+console.log(undefinedVar)
+console.log(typeof undefinedVar)
+console.log(nullVar)
+console.log(typeof nullVar)
