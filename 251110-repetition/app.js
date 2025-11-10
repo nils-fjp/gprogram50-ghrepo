@@ -165,3 +165,13 @@ for (const c of codes) {
 }
 console.log("20. result =", result);
 result = "";
+// part 2
+const getUsersOverAge = (usersList, cutOff) => {
+    let newList = [];
+    for (const user of usersList) {
+        if (user.age > cutOff) {
+            newList.push(user.name);
+        }
+    }
+    return newList;
+};
