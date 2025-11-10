@@ -64,7 +64,33 @@ let totalValue = 0;
 let output = "";
 let count = 0;
 
-// 14.
+// 1. "RiftWalker"
+
+// 2. "Eldoria"
+
+// 3. "Ashfall"
+
+// 4. "Pearl"
+
+// 5. 5
+
+// 6. "Ashfall"
+
+// 7. "Farlig zon"
+output = "";
+// 8. "Säker zon"
+output = "";
+// 9. "Farlig zon"
+output = "";
+// 10. 2300
+totalValue = 0;
+// 11. "Health Potion Sword "
+output = "";
+// 12. 3
+count = 0;
+// 13. 1
+count = 0;
+// 14. 355
 for (const world of gameWorlds) {
     for (const zone of world.zones) {
         for (const lootItem of zone.loot) {
@@ -73,7 +99,19 @@ for (const world of gameWorlds) {
     }
 }
 console.log(totalValue);
+totalValue = 0;
+// 15. 300
+totalValue = 0;
+// 16. "Burning Plains"
 
+// 17. "Lava Lake"
+
+// 18. "FA"
+output = "";
+// 19. 200
+
+// 20. 1
+totalValue = 0;
 // part 2
 
 const findAllLootItems = (gameWorlds) => {
