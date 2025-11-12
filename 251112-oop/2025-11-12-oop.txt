@@ -1,0 +1,168 @@
+# intro till oop
+
+1. what is oop?
+2. analogy: class vs. object
+3. syntax: keyword `class`
+4. `constructor()`-method
+5. data: properties and `this`
+6. behavior of methods
+7. `new` keyword 
+8. creating a `class`
+
+1. no oop, data in var:
+`let car1_brand = 'volvo'`
+`let car2_brand = 'tesla'`
+
+2. with objects, no classes:
+```
+let car1 = {
+    brand: 'volvo',
+    model: 'v60',
+    isRunning: false,
+};
+let car2 = {
+    brand: 'tesla',
+    model: 'model 3',
+    isRunning: true,
+};
+```
+
+3. with classes
+```
+
+```
+
+klasser är ritningar till objekt. det blir först ett objekt när man skapar en instans `new`.
+`class Car {}` skapar en mall över ett objekt `car`
+det är VIKTIGT att första bokstaven i `Car` är stor
+
+`Car`är namnet på mallen. stor bokstav. alla egenskaper och metoder definieras i kroppen `{}`
+
+en konstruktor är det första man gör när man bygger någonting efter mallen, för att faktiskt skapa ett objekt.
+```
+class Car {
+    constructor(brand, model) {
+        console.log('nytt bilmärke skapas');
+        console.log(`Märke: ${brand}`);
+        console.log(`Modell:: ${model}`;
+    }
+}
+
+const myCar = new Car('Volvo','V60');
+```
+
+när man skapar instansen `myCar` då sker allt som händer i konstruktorn också. 
+
+chaining: `func().func().func()`
+exempelvis `log().map().reduce()`
+
+## properties and `this`
+
+properties är varabler som tillhör objektet 
+`this.` är en referens till det specifika objektet som kommer skapas av konstruktorn
+
+
+§§§
+class Car {
+    constructor(brand,model){
+        this.brand = brand
+        this model = model
+        this.year  = year
+    }
+}   
+objektet ska tilldelas värdet i brand som key
+
+`this.` är en pointer som pekar mot objektet 
+
+
+`this.` är faktiskt, egentligen närmsta objektet
+
+
+## arrow functions `=>` och `this.`
+
+'gamla' sättet att skriva en funktion var
+
+```
+function createCar() { ... }  // old
+const createCar () => { ... } // new
+```
+när man skapar en vanlig funktion som inte har med `this.` att göra är det bättre att skriva arrow function
+
+```
+function createCar() {
+    50 + 40
+}  
+const createCar () => 50 + 40 // new
+const createCar() {
+    50 + 40
+}
+```
+tre anledningar att använda arrow functions i vanliga fall. readability är nummer ett.
+
+```
+const arr = [100,200,300,400,500]
+arr.forEarch(function(siffra) {
+    return siffra
+}) // MOTSVARAR
+arr.forEach(siffra => siffra)
+```
+
+som till exempel `arr.forEach(siffra => siffra * 2)`
+eller  `arr.forEach(siffra => siffra * 2).sort().reduce()`
+
+---
+
+
+`this.` är den viktigaste tekniska ansledningen till varför man har gått över till arrow function
+
+const person =
+    namn: "Kalle",
+    hälsaSenare: function() {
+        setTimeout(function)= {
+        console.log("hej jag heter"+
+        
+        
+        
+        
+`this.` är alltid det närmsta objektet utanför funktionen. därför blir `console.log(this)` av ovanstående objekt `person`
+
+
+arrow function gör att den går utanför förälderfunktionen och tittar på vilket objekt den har. 
+annars kan den gå utanför föräldern hela vägen och kanske hela vägen till `Window`
+
+
+function() { ... }, this)
+
+
+
+när en function är en metod på ett objekt, blir `this` automatiskt själva objektet.
+
+
+const nummer = [1,2,3];
+const dubbla = nummer.map(function(n) {
+    return n* 2;
+});
+
+
+## hur man skapar en metod i en klass?
+
+class Car {
+    constructor(brand, model) {
+        this.brand = brand;
+        this.model = model;
+        this.isRunning =false;
+    }
+    
+    start() {
+        this.isRunning = true;
+        console.log(`${} startar`)
+        }
+    
+    stop () {
+        this isrunning = false
+        console.log(`${} stannar`)
+        }
+}
+
+       
+    
